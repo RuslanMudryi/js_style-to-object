@@ -7,7 +7,7 @@
  */
 
 function convertToObject(sourceString) {
-  return sourceString
+  const converted = sourceString
     .split(';')
     .map((el) => el.trim())
     .filter((el) => el.length > 0)
@@ -18,6 +18,8 @@ function convertToObject(sourceString) {
 
       return obj;
     }, {});
+
+  return converted;
 }
 
 module.exports = convertToObject;
